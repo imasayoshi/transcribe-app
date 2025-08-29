@@ -1,0 +1,27 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+# 開発ルール
+
+## TypeScript
+
+- `any`使用禁止 - 明確な型定義必須
+- 型安全性を最優先とする
+
+## アーキテクチャ
+
+### ページ作成
+
+1. `src/features/[機能名]/`でディレクトリ作成
+2. サブディレクトリ：`components/`, `hooks/`, `types/`, `services/`
+
+### コンポーネント
+
+- 関数コンポーネント使用
+- `React.FC`禁止 - props 直接型注釈
+- JSX のみの場合 React インポート不要
+- Server/Client Component 区別明確化
+- Suspense 活用
